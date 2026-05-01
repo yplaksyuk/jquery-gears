@@ -320,7 +320,9 @@
 					const col_index = $(col).index();
 					const cell_content = this.#createCellContent(row_data, name);
 
-					row.find('td').eq(col_index).empty().append(cell_content);
+					row.find('td').eq(col_index).empty().append(typeof cell_content === 'string'
+						? document.createTextNode(cell_content)
+						: cell_content);
 				}
 			});
 

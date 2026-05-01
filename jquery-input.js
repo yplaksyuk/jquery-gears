@@ -866,7 +866,7 @@
 					},
 					_renderItem: function(ul, item) {
 						const i = function(c) {
-							return $('<li></li>').append($('<div></div>').append(c)).appendTo(ul);
+							return $('<li></li>').append($('<div></div>').text(c)).appendTo(ul);
 						};
 
 						if (item.code !== undefined && item.desc !== undefined)
